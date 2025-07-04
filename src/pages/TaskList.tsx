@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { useState } from "react";
 import type { Task, Column as ColumnType } from "../types";
-import Column from "../Column";
+import {Column} from '../components'
 import { DndContext, type DragEndEvent } from "@dnd-kit/core";
 
 const COLUMNS: ColumnType[] = [
