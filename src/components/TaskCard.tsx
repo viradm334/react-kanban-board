@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { useTasks } from "../context/TaskContext";
 import { Link } from "react-router-dom";
+import { isOverdue } from "../utils";
 
 type TaskCardProps = {
   task: Task;
@@ -36,6 +37,13 @@ function TaskCard({ task }: TaskCardProps) {
       <div {...listeners} className="cursor-grab">
         <h3 className="font-medium text-neutral-50">{task.title}</h3>
         <p className="mt-2 text-sm text-neutral-400">{task.description}</p>
+        {task.status !== "DONE" ? (
+          <p className="mt-2 text-sm text-neutral-400 font-bold">
+            {isOverdue(task.due_date) ? "Overdue" : "Upcoming"}
+          </p>
+        ) : (
+          ""
+        )}
       </div>
       <div className="mt-auto flex justify-end gap-2 pt-4">
         <button
