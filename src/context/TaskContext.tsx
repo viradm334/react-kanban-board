@@ -14,24 +14,28 @@ const INITIAL_TASKS: Task[] = [
       title: "Research Project",
       description: "Write unit test",
       status: "TODO",
+      due_date: new Date("2025-07-10")
     },
     {
       id: 2,
       title: "Research",
       description: "Write test",
       status: "TODO",
+      due_date: new Date("2025-07-10")
     },
     {
       id: 3,
       title: "Mandi",
       description: "Mandi Sore",
       status: "IN_PROGRESS",
+      due_date: new Date("2025-07-10")
     },
     {
       id: 4,
       title: "Minum Air",
       description: "Minum Air Mineral",
       status: "DONE",
+      due_date: new Date("2025-07-10")
     },
   ];
 

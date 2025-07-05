@@ -5,6 +5,7 @@ export type Task = {
     status: TaskStatus;
     title: string;
     description: string;
+    due_date: Date;
 };
 
 export type Column = {
