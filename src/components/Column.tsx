@@ -3,7 +3,6 @@ import TaskCard from './TaskCard';
 import type {Column as ColumnType} from '../types';
 import type { Task } from '../types';
 
-
 type ColumnProps = {
     column: ColumnType;
     tasks: Task[];

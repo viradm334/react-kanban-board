@@ -1,12 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
+import { TaskProvider } from "./context/TaskContext";
 
 function App() {
   return(
-    <Router>
-      <AppRoutes />
+    <TaskProvider>
+      <Router>
+        <AppRoutes />
     </Router>
+    </TaskProvider>
   )
 }
 
