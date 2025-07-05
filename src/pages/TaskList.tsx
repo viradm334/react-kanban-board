@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import type { Task, Column as ColumnType } from "../types";
-import {Column} from '../components'
+import {Column, Sidebar} from '../components'
 import { DndContext, type DragEndEvent } from "@dnd-kit/core";
 import { useTasks } from "../context/TaskContext";
 
@@ -29,6 +29,9 @@ const TaskList: FC = () => {
 
   return (
     <>
+    <div className="w-full h-screen flex bg-gray-100">
+      <Sidebar />
+      <div className="w-4/5">
       <div className="p-4">
         <div className="flex gap-8">
           <DndContext onDragEnd={hadleDragEnd}>
@@ -44,6 +47,8 @@ const TaskList: FC = () => {
           </DndContext>
         </div>
       </div>
+      </div>
+    </div>
     </>
   );
 };

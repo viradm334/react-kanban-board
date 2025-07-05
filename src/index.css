@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@layer theme {
+  :root {
+    --spacing: 0.25rem;
+  }
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
